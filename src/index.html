@@ -9,45 +9,20 @@
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container" style="width: 650px;">
     <div class="row">
-      <div class="col-lg-12">
-        <h1 class="text-center">Election Results</h1>
-        <hr />
-        <br />
-        <div id="loader">
-          <p class="text-center">Loading...</p>
-        </div>
-        <div id="content" style="display: none;">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Votes</th>
-              </tr>
-            </thead>
-            <tbody id="candidatesResults">
-            </tbody>
-          </table>
-          <hr />
-          <p id="accountAddress" class="text-center"></p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <form onSubmit="App.castVote(); return false;">
-        <div class="form-group">
-          <label for="candidatesSelect">Select Candidate</label>
-          <select class="form-control" id="candidatesSelect">
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Vote</button>
-        <hr />
-      </form>
+      <h1>Play Tic Tac Toe</h1>
+      <div id="tictactoegame"></div>
+      <div id="gameListHeading" class="gameListHeading">Please choose a game to play or create your own request:</div>
+      <div id="gameList"></div>
+      <div id="activeGameList"></div>
+      <button onclick="App.createNewGame()" id="newGameButton" class="newGameButton">Create New Game</button>
+      <div id="requestView">You've put in your request and are waiting for a partner to accept!</div>
+      <div class="account" id="accountAddress"></div>
     </div>
   </div>
 
